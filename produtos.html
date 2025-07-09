@@ -1,166 +1,187 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Produtos - ELETROMED, LDA</title>
-<meta name="description" content="Produtos da ELETROMED, LDA: equipamentos hospitalares, laboratoriais e consumíveis médicos de alta qualidade em Moçambique." />
-<meta name="keywords" content="equipamentos hospitalares, equipamentos laboratoriais, consumíveis médicos, eletromed, moçambique" />
-<meta name="author" content="ELETROMED, LDA" />
-<style>
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #fff;
-    color: #333;
-    line-height: 1.6;
-  }
-  header {
-    background: #0077b6;
-    color: #fff;
-    padding: 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0 20px;
-  }
-  .logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .logo-container img {
-    height: 90px;
-    width: auto;
-    object-fit: contain;
-  }
-  header nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 8px;
-    font-weight: 600;
-    transition: color 0.3s;
-  }
-  header nav a:hover {
-    color: #90e0ef;
-    text-decoration: underline;
-  }
-  main {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-  h1 {
-    color: #0077b6;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  .options-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-  }
-  .option {
-    cursor: pointer;
-    flex: 1 1 300px;
-    max-width: 400px;
-    border: 2px solid #0077b6;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    transition: background-color 0.3s, box-shadow 0.3s;
-  }
-  .option:hover {
-    background-color: #0077b6;
-    color: #fff;
-    box-shadow: 0 4px 15px rgba(0, 119, 182, 0.5);
-  }
-  .option img {
-    max-width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
-  .option h2 {
-    margin: 0;
-    font-size: 1.8rem;
-  }
-  footer {
-    background: #333;
-    height: 140px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
-  footer img {
-    height: 90px;
-    object-fit: contain;
-  }
-  @media (max-width: 768px) {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Produtos - ELETROMED, LDA</title>
+  <meta name="description" content="Produtos da ELETROMED, LDA: equipamentos hospitalares, laboratoriais e consumíveis médicos de alta qualidade em Moçambique." />
+  <meta name="keywords" content="equipamentos hospitalares, equipamentos laboratoriais, consumíveis médicos, eletromed, moçambique" />
+  <meta name="author" content="ELETROMED, LDA" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0077b6;
+      color: #fff;
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
     .logo-container img {
-      height: 70px;
+      height: 90px;
+      width: auto;
+      object-fit: contain;
     }
-    footer img {
-      height: 70px;
+
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: 600;
+      transition: color 0.3s;
     }
+
+    header nav a:hover {
+      color: #90e0ef;
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      color: #0077b6;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
     .options-container {
-      flex-direction: column;
-      gap: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
     }
+
     .option {
-      max-width: 100%;
+      cursor: pointer;
+      flex: 1 1 300px;
+      max-width: 400px;
+      border: 2px solid #0077b6;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      transition: background-color 0.3s, box-shadow 0.3s;
     }
-  }
-</style>
+
+    .option:hover {
+      background-color: #0077b6;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(0, 119, 182, 0.5);
+    }
+
+    .option img {
+      max-width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .option h2 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    footer {
+      background: #333;
+      height: 140px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    footer img {
+      height: 90px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      .logo-container img {
+        height: 70px;
+      }
+
+      footer img {
+        height: 70px;
+      }
+
+      .options-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .option {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <nav>
-    <div class="logo-container">
-      <img src="img/log.png" alt="Logotipo ELETROMED" />
-    </div>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="servicos.html">Serviços</a>
-      <a href="produtos.html">Produtos</a>
-      <a href="contactos.html">Contactos</a>
-    </div>
-  </nav>
-</header>
+  <header>
+    <nav>
+      <div class="logo-container">
+        <img src="img/LOGOTIPO.png" alt="Logotipo ELETROMED" />
+      </div>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="contactos.html">Contactos</a>
+      </div>
+    </nav>
+  </header>
 
-<main>
-  <h1>Produtos</h1>
-  <p style="text-align:center; max-width:700px; margin: 0 auto 40px;">
-    Escolha uma categoria para explorar nossos produtos de alta qualidade:
-  </p>
+  <main>
+    <h1>Produtos</h1>
+    <p style="text-align:center; max-width:700px; margin: 0 auto 40px;">
+      Escolha uma categoria para explorar nossos produtos de alta qualidade:
+    </p>
 
-  <div class="options-container">
-    <div class="option" onclick="window.location.href='equipamentos.html'" role="button" tabindex="0" onkeypress="if(event.key==='Enter'){window.location.href='equipamentos.html'}" aria-label="Ir para Equipamentos">
-      <img src="img/eq.png" alt="Imagem ilustrativa Equipamentos" />
-      <h2>Equipamentos</h2>
+    <div class="options-container">
+      <!-- Equipamentos -->
+      <div class="option" onclick="window.location.href='equipamentos.html'" role="button" tabindex="0" onkeypress="if(event.key==='Enter'){window.location.href='equipamentos.html'}" aria-label="Ir para Equipamentos">
+        <img src="https://photos.fife.usercontent.google.com/pw/AP1GczOrRk_RS0HvLDCQRVH8RTlXwalrdlPuZTGecdvCYGTwA7e12BOmMukV=w330-h220-no?authuser=0" alt="Imagem ilustrativa Equipamentos" />
+        <h2>Equipamentos</h2>
+      </div>
+
+      <!-- Consumíveis -->
+      <div class="option" onclick="window.location.href='consumiveis.html'" role="button" tabindex="0" onkeypress="if(event.key==='Enter'){window.location.href='consumiveis.html'}" aria-label="Ir para Consumíveis">
+        <img src="https://photos.fife.usercontent.google.com/pw/AP1GczN_foJ783cYzEPYT9c1Qfn8D6cPBePn9LpIMDyzoBftAVejLN6kJ4af=w1304-h869-s-no-gm?authuser=0" alt="Imagem ilustrativa Consumíveis" />
+        <h2>Consumíveis</h2>
+      </div>
     </div>
+  </main>
 
-    <div class="option" onclick="window.location.href='consumiveis.html'" role="button" tabindex="0" onkeypress="if(event.key==='Enter'){window.location.href='consumiveis.html'}" aria-label="Ir para Consumíveis">
-      <img src="img/cons.png" alt="Imagem ilustrativa Consumíveis" />
-      <h2>Consumíveis</h2>
-    </div>
-  </div>
-</main>
-
-<footer>
-  <img src="img/log.png" alt="Logotipo ELETROMED no rodapé" />
-</footer>
+  <footer>
+    <img src="img/LOGOTIPO.png" alt="Logotipo ELETROMED no rodapé" />
+  </footer>
 
 </body>
 </html>
