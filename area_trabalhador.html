@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Departamento Técnico - ELETROMED, LDA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #f9f9f9; color: #333; }
+    header { background: #0077b6; color: #fff; padding: 15px; text-align: center; }
+    header h1 { margin: 0; font-size: 1.3em; }
+
+    main { max-width: 600px; margin: 20px auto 80px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+
+    h2 { color: #0077b6; text-align: center; }
+    h3 { color: #0077b6; margin-top: 0; }
+
+    .menu-btns { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 20px; }
+    .menu-btns button {
+      flex: 1 1 40%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #0077b6;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .menu-btns button:hover { background: #005f91; }
+
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    textarea { resize: vertical; height: 80px; }
+
+    button.submit-btn {
+      background: #28a745;
+      color: white;
+      padding: 10px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button.submit-btn:hover { background: #218838; }
+
+    #btn-voltar {
+      background: #ff4d4d;
+      color: white;
+      padding: 10px;
+      margin-top: 20px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    #btn-voltar:hover { background: #cc0000; }
+
+    footer { background: #333; color: #fff; text-align: center; padding: 15px; position: fixed; bottom: 0; width: 100%; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Departamento Técnico - ELETROMED, LDA</h1>
+</header>
+
+<main>
+  <h2>Área Técnica</h2>
+
+  <div class="menu-btns">
+    <button onclick="mostrarSecao('folha')">Folha de Obra</button>
+    <button onclick="mostrarSecao('relatorio')">Relatório</button>
+    <button onclick="mostrarSecao('visitas')">Visitas</button>
+    <button onclick="mostrarSecao('solicitacoes')">Solicitações</button>
+    <button onclick="mostrarSecao('agenda')">Agenda</button>
+  </div>
+
+  <!-- Folha de Obra -->
+  <div id="folha" style="display: none;">
+    <h3>Folha de Obra</h3>
+    <label>Data:</label>
+    <input type="date">
+    <label>Nome da Obra:</label>
+    <input type="text" placeholder="Ex: Instalação de laboratório">
+    <label>Detalhes:</label>
+    <textarea placeholder="Descreva os detalhes da obra"></textarea>
+    <button class="submit-btn" onclick="alert('Folha de Obra guardada (simulação)')">Guardar</button>
+  </div>
+
+  <!-- Relatório -->
+  <div id="relatorio" style="display: none;">
+    <h3>Relatório</h3>
+    <label>Data:</label>
+    <input type="date">
+    <label>Título:</label>
+    <input type="text" placeholder="Ex: Manutenção Preventiva">
+    <label>Descrição:</label>
+    <textarea placeholder="Descreva os serviços realizados"></textarea>
+    <button class="submit-btn" onclick="alert('Relatório enviado (simulação)')">Enviar</button>
+  </div>
+
+  <!-- Visitas -->
+  <div id="visitas" style="display: none;">
+    <h3>Visitas</h3>
+    <label>Data:</label>
+    <input type="date">
+    <label>Local:</label>
+    <input type="text" placeholder="Ex: Hospital Central">
+    <label>Observações:</label>
+    <textarea placeholder="Notas da visita"></textarea>
+    <button class="submit-btn" onclick="alert('Visita registada (simulação)')">Guardar</button>
+  </div>
+
+  <!-- Solicitações -->
+  <div id="solicitacoes" style="display: none;">
+    <h3>Solicitações</h3>
+    <label>Data:</label>
+    <input type="date">
+    <label>Tipo de Solicitação:</label>
+    <input type="text" placeholder="Ex: Pedido de peças">
+    <label>Detalhes:</label>
+    <textarea placeholder="Descreva a solicitação"></textarea>
+    <button class="submit-btn" onclick="alert('Solicitação enviada (simulação)')">Enviar</button>
+  </div>
+
+  <!-- Agenda -->
+  <div id="agenda" style="display: none;">
+    <h3>Agenda</h3>
+    <label>Data:</label>
+    <input type="date">
+    <label>Hora:</label>
+    <input type="time">
+    <label>Descrição:</label>
+    <textarea placeholder="Detalhes do compromisso"></textarea>
+    <button class="submit-btn" onclick="alert('Compromisso agendado (simulação)')">Agendar</button>
+  </div>
+
+  <button id="btn-voltar" onclick="voltarMenu()">Voltar ao Menu</button>
+</main>
+
+<footer>
+  &copy; 2025 ELETROMED, LDA. Todos os direitos reservados.
+</footer>
+
+<script>
+function mostrarSecao(secao) {
+  const secoes = ['folha', 'relatorio', 'visitas', 'solicitacoes', 'agenda'];
+  secoes.forEach(id => {
+    document.getElementById(id).style.display = 'none';
+  });
+  document.getElementById(secao).style.display = 'block';
+}
+
+function voltarMenu() {
+  window.location.href = "area_trabalhador.html"; // substitua pelo seu arquivo principal se necessário
+}
+</script>
+
+</body>
+</html>
